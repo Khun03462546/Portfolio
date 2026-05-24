@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="background-decoration">
+        <div class="icon-float" style="top: 10%; left: 5%;"><i class="fab fa-html5"></i></div>
+        <div class="icon-float" style="top: 20%; right: 8%; animation-delay: 2s;"><i class="fab fa-css3-alt"></i></div>
+        <div class="icon-float" style="top: 35%; left: 12%; animation-delay: 4s;"><i class="fab fa-js"></i></div>
+        <div class="icon-float" style="top: 50%; right: 10%; animation-delay: 3s;"><i class="fab fa-react"></i></div>
+        <div class="icon-float" style="top: 65%; left: 8%; animation-delay: 5s;"><i class="fab fa-python"></i></div>
+        <div class="icon-float" style="top: 75%; right: 12%; animation-delay: 1s;"><i class="fab fa-node-js"></i></div>
+        <div class="icon-float" style="top: 25%; right: 25%; animation-delay: 6s;"><i class="fab fa-java"></i></div>
+        <div class="icon-float" style="top: 55%; left: 20%; animation-delay: 2.5s;"><i class="fab fa-php"></i></div>
+        <div class="icon-float" style="top: 40%; right: 30%; animation-delay: 4.5s;"><i class="fab fa-git-alt"></i></div>
+        <div class="icon-float" style="top: 70%; left: 25%; animation-delay: 3.5s;"><i class="fab fa-bootstrap"></i></div>
+    </div>
+    <aside class="sidebar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#about" class="nav-link" data-section="about" title="About"><i class="fas fa-user"></i><span class="tooltip">About</span></a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link" data-section="skills" title="Skills"><i class="fas fa-code"></i><span class="tooltip">Skills</span></a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link" data-section="projects" title="Projects"><i class="fas fa-project-diagram"></i><span class="tooltip">Projects</span></a></li>
+            <li class="nav-item"><a href="#education" class="nav-link" data-section="education" title="Education"><i class="fas fa-graduation-cap"></i><span class="tooltip">Education</span></a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact" title="Contact"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></a></li>
+        </ul>
+    </aside>
     <div class="container">
         <header>
             <div class="brand">
@@ -24,7 +45,7 @@
 
         <main>
             <section>
-                <div class="card">
+                <div class="card" id="about">
                     <p class="section-title">About Me</p>
                     <p>สวัสดีครับ เว็บนี้เป็นเว็บไซต์ Portfolio ของผม ซึ่งแสดงผลงานและทักษะในการพัฒนาเว็บและโปรเจคที่ภูมิใจนำเสนอของผม</p>
                     <p>Hello, this website is my portfolio website, showcasing my work, web development skills, and projects that I am proud to present.</p>
@@ -39,9 +60,9 @@
                         <span class="skill lang"><i class="fab fa-python"></i> Python</span>
                         <span class="skill lang"><i class="fas fa-database"></i> SQL</span>
                         <span class="skill lang"><i class="fab fa-php"></i> PHP</span>
-                        <span class="skill lang"><i class="fab fa-dart"></i> Dart</span>
+                        <span class="skill lang"><i class="fab fa-dart-lang"></i> Dart</span>
                         <span class="skill lang"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill lang"><i class="fas fa-plus"></i> C++</span>
+                        <span class="skill lang"><i class="fas fa-c"></i> C++</span>
                     </div>
                     <br>
                     <p class="section-title">Frameworks & Libraries</p>
@@ -86,7 +107,7 @@
             </section>
 
             <aside>
-                <div class="card snapshot-card">
+                <div class="card snapshot-card" id="skills">
                     <p class="section-title">Soft & Hard Skills</p>
                     <p class="section-subtitle">ทักษะสำคัญที่ผมใช้ในการทำงานจริง แยกตามประเภท</p>
                     <div class="skill-group">
@@ -109,16 +130,14 @@
                     </div>
                 </div>
 
-                <div class="card" style="margin-top:12px">
-                    <p class="section-title">Contact</p>
+                <div class="card" style="margin-top:12px" id="contact">
                     <div class="contact">
                         <div>📧 <a href="mailto:Tanagon.Khumnuan@gmail.com">Tanagon.Khumnuan@gmail.com</a></div>
                         <div>🔗 <a href="https://github.com/Khun03462546">GitHub</a> • <a href="#">LinkedIn</a></div>
                     </div>
                 </div>
 
-                <div class="card" style="margin-top:12px">
-                    <p class="section-title">Education</p>
+                <div class="card" style="margin-top:12px" id="education">
                     <div class="history-item">
                         <p class="history-title">วิทยาศาสตร์คอมพิวเตอร์, มหาวิทยาลัย นเรศวร</p>
                         <p class="history-detail">2022 - 2026 | เกรดเฉลี่ย 3.01</p>
@@ -153,7 +172,7 @@
         </main>
 
         <footer>
-            © 2026 Tanag — Built with HTML & CSS
+            © 2026 Tanagon — Built with HTML & CSS
         </footer>
     </div>
     <script src="index.js"></script>

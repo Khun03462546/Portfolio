@@ -1,4 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('[id]');
+    let highlightedSection = null;
+
+    // Handle sidebar link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('data-section');
+            const targetSection = document.getElementById(targetId);
+
+            // Remove previous highlight
+            if (highlightedSection) {
+                highlightedSection.classList.remove('highlighted');
+            }
+
+            // Add highlight to clicked section
+            if (targetSection) {
+                highlightedSection = targetSection;
+                targetSection.classList.add('highlighted');
+
+                // Scroll to section
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Remove highlight after 2 seconds
+                setTimeout(() => {
+                    if (highlightedSection === targetSection) {
+                        targetSection.classList.remove('highlighted');
+                        highlightedSection = null;
+                    }
+                }, 2000);
+            }
+
+            // Update active nav link
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-section') === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
     // Add stagger animation to cards
     const cards = document.querySelectorAll('.card');
     cards.forEach((card, index) => {
@@ -67,3 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addScrollIndicator();
 });
+
+

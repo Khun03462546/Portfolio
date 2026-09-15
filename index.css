@@ -330,6 +330,35 @@ p.lead {
     font-size: 0.95rem;
 }
 
+.header-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+    color: var(--accent);
+    background: rgba(0, 212, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.35);
+    transform: translateY(-2px);
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 340px;
@@ -411,20 +440,75 @@ main {
     background: linear-gradient(90deg, var(--accent), rgba(0, 212, 255, 0.3));
 }
 
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.github-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    background: rgba(0, 212, 255, 0.06);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.github-all-link:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px);
+}
+
 .projects .project {
+    display: block;
     border-radius: 14px;
     padding: 20px;
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(124, 58, 237, 0.04));
     margin-bottom: 16px;
     border: 1px solid rgba(0, 212, 255, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
 .project h5 {
-    margin-bottom: 10px;
+    margin: 0;
     color: var(--text-primary);
     letter-spacing: -0.01em;
     font-size: 1.05rem;
     font-weight: 700;
+}
+
+.lang-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    padding: 4px 10px;
+    border-radius: 999px;
+    flex-shrink: 0;
 }
 
 .project-summary {
@@ -437,10 +521,20 @@ main {
 }
 
 .project-story {
-    margin: 0;
+    margin: 0 0 14px;
     color: #e0e8f0;
     font-size: 0.97rem;
     line-height: 1.8;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.3s ease;
 }
 
 .project {
@@ -452,6 +546,10 @@ main {
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(124, 58, 237, 0.08));
     border-color: rgba(0, 212, 255, 0.2);
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.05);
+}
+
+.project:hover .project-link {
+    color: var(--accent);
 }
 
 .skills {
